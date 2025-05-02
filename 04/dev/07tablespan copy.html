@@ -10,6 +10,9 @@
       border-collapse: collapse;
       
     }
+    td{
+      text-align: center;
+    }
     table{ margin: 30px auto;}
     th{ 
       background-color: rgb(196, 235, 184, 0.3);
@@ -18,49 +21,56 @@
     th,td{
       padding : 10px 20px 10px 20px;
     }
+    
   </style>
 </head>
 <body>
   <div class="wrap">
+    <h1 style="text-align: center;">상품구성</h1>
   <table>
+    <caption>선물용과 가정용 상품구성</caption>
+
+    <colgroup>
+      <col style="background-color: grey;">
+      <col>
+      <col>
+      <col>
+    </colgroup>
     
       <thead>
         <tr>
             <th>용도</th>
             <th>중량</th>
-            <th>개수</th>
-            <th>가격</th>
+            <th style="width: 150px;">개수</th>
+            <th style="width: 150px;">가격</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-            <td>선물용</td>
+            <td rowspan="2">선물용</td>
+            <td>3kg</td>
+            <td >11~16과</td>
+            <td>35000</td>
+        </tr>
+        <tr >
             <td>3kg</td>
             <td>11~16과</td>
-            <td>3,5000원</td>
+            <td>35000</td>
         </tr>
         <tr>
-            <td>선물용</td>
+            <td rowspan="2">가정용 </td>
             <td>3kg</td>
             <td>11~16과</td>
-            <td>3,5000원</td>
+            <td>35000</td>
         </tr>
+      
         <tr>
-            <td>선물용</td>
+
             <td>3kg</td>
             <td>11~16과</td>
-            <td>3,5000원</td>
+            <td>35000</td>
         </tr>
       </tbody>
-      <tfoot>
-        <tr>
-            <td>선물용</td>
-            <td>3kg</td>
-            <td>11~16과</td>
-            <td>3,5000원</td>
-        </tr>
-      </tfoot>
-      
   </table>
 </div>
 </body>
