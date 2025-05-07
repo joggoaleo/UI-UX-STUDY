@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <form method='get' action='#'>
+
+
+        <fieldset>
+          <legend>취미 목록</legend>
+          <label for="hobby">당구 </label> <input type='radio' name='취미목록' id="hobby" placeholder='취미 목록' value="당구">
+          <label for="hobby2">게임 </label> <input type='radio' name='취미목록' id="hobby2" placeholder='취미 목록' value="브롤스타드">
+          <label for="hobby3">영화 </label> <input type='radio' name='취미목록' id="hobby3" placeholder='취미 목록' value="기생충">
+        </fieldset>
+        <fieldset>
+          <legend>취미 목록1</legend>
+          <label for="hobby">당구 </label> <input type='checkbox' name='취미목록ck' id="hobby" placeholder='취미 목록' value="당구">
+          <label for="hobby2">게임 </label> <input type='checkbox' name='취미목록ck' id="hobby2" placeholder='취미 목록' value="브롤스타드">
+          <label for="hobby3">영화 </label> <input type='checkbox' name='취미목록ck' id="hobby3" placeholder='취미 목록' value="기생충">
+        </fieldset>
+        <fieldset>
+          <legend>막대바 진행</legend>
+          <label for="#">현재진행사항</label><input type="range" name="range" id="range" min="0" max="100" step="1" value="20">
+        </fieldset>
+
+        <!-- <input type='submit' value='value'><br> -->
+         <input type="image" src="../../images/login.png" alt="login"><br>
+        <input type="reset" value="취소"><br>
+        <input type="button" value="전송하기" onclick="window.open('https://www.naver.com')"><br>
+
+        <label for="age">당신의 나이</label> <input type="number" name="age" id="age" min="0" max="100">살<br>
+
+        
+        <input type="date" name="" id="date">
+    
+      </form>
+
+  </div>
+</body>
+</html>
