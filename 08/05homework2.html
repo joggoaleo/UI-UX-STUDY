@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    section {
+      width: 400px;
+      display: grid;
+      grid-template-columns: repeat(2, 350px) ;
+      grid-template-rows: repeat(2, 200px) ;
+      column-gap: 20px;
+      row-gap: 10px;
+    }
+
+    article {
+      border: 1px solid grey;
+      width: 350px;
+      height: 200px;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    footer {
+      width: 700px;
+      height: 2rem;
+      background-color: black;
+      position: relative;
+      margin-left: 20px;
+      color: yellow;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>강아지 용품 준비하기</h1>
+  <section>
+    <article><h1>강아지집</h1></article>
+    <article><h1>강아지 먹이</h1></article>
+    <article><h1>밥그릇</h1></article>
+    <article><h1>이름표</h1></article>
+    <footer>boxmodel연습</footer>
+  </section>
+
+</body>
+
+</html>
