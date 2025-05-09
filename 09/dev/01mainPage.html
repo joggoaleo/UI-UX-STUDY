@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .wrap{
+      width: 1200px;
+      
+      margin: 0 auto;
+      border: 1px solid black;
+      padding: 1rem 2rem;
+      background-color: grey;
+    }
+    header{
+      background-color: white;
+      width: 100%;
+      height: 100px;
+      margin-bottom: 30px;
+    }
+    nav{
+      background-color: white;
+      width: 100%;
+      height: 40px;
+      margin-bottom: 30px;
+
+    }
+    p{
+      text-align: center;
+    }
+    main{
+      background-color: white;
+      width: 100%;
+      height: 400px;
+      margin-bottom: 30px;
+    }
+    footer{
+      background-color: white;
+      width: 100%;
+      height: 60px;
+    }
+    .section1{
+      width: 95%;
+      height: 140px;
+      border: 1px dotted black;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      
+      display: flex;
+      /* flex-direction: row;
+      flex-wrap: nowrap; */
+      justify-content: space-evenly;
+      align-items: end;
+    }
+    .section2{
+      width: 95%;
+      height: 200px;
+      border: 1px dotted black;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+      
+
+      display: flex;
+      /* flex-direction: row;
+      flex-wrap: nowrap; */
+      justify-content: space-evenly;
+      align-items: end;
+    }
+    .section1>article{
+      width: 47%;
+      height: 100px;
+      border: 1px dotted black;
+    }
+    
+    .s2Box{
+      width: 47%;
+      height: 200px;
+      border: 1px dotted black;
+      padding : 0 10px;
+    }
+    .s2Box>article{
+      width: 100%;
+      height: 80%;
+      border: 1px dotted black;
+    }
+    .section2>aside>article:nth-child(2){
+      width: 100%;
+      height: 70px;
+      border: 1px dotted black;
+    }
+    .section2>aside>article:last-child{
+      width: 100%;
+      height: 90px;
+      border: 1px dotted black;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 헤더 -->
+    <header><p>&lt;header&gt;</p></header>
+    <!-- 네브 -->
+    <nav><p>&lt;nav&gt;</p></nav>
+    <!-- 메인 -->
+    <main><p>&lt;main&gt;</p>
+    
+      <section class="section1">
+        <article><p>&lt;article&gt;</p></article>
+        <article><p>&lt;article&gt;</p></article>
+      </section>
+
+      <section class="section2">
+        <section class="s2Box"><p>&lt;section&gt;</p>
+        <article>&lt;좌&gt;</article>
+        </section>
+        <aside class="s2Box"><p>&lt;aside&gt;</p>
+        <article>&lt;우상&gt;</article>
+        <article>&lt;우하&gt;</article>
+        </aside>
+      </section>
+    
+    
+    
+    </main>
+    <!-- 풋터 -->
+    <footer><p>&lt;footer&gt;</p></footer>
+  </div>
+</body>
+</html>
