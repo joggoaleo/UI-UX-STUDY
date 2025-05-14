@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    ul{
+      display: flex;
+      justify-content: space-around;
+    }
+    ul>li{
+      list-style: none;
+      margin-top: 50px;
+      margin-bottom: 50px;
+     
+    }
+    li>button{
+      width: 100px;
+      height: 50px;
+    }
+    .wrap{
+      border: 1px dotted black;
+      width: 900px;
+      height: 50vh;
+      margin: 200px auto;
+    }
+    #result{
+      width: 500px;
+      height: 50%;
+      border: 1px solid black;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul>
+      <li><button id="btnobj1" onclick="changeBg('green');">red</button></li>
+      <li><button id="btnobj2" onclick="changeBg('yellow');">black</button></li>
+      <li><button id="btnobj3" onclick="changeBg('pink');">blue</button></li>
+    </ul>
+    <div id="result"></div>
+  </div>
+    <script>
+      function changeBg(color){
+        let result = document.querySelector("#result");
+        result.style.backgroundColor = color;
+      }
+
+
+      //1.객체를 찾는다.
+      let btnobj1 = document.querySelector("#btnobj1");
+      let btnobj2 = document.querySelector("#btnobj2");
+      let btnobj3 = document.querySelector("#btnobj3");
+      let result = document.querySelector("#result");
+
+      //2. 객체 속성, context , style(이벤트 설정)
+      btnobj1.ondblclick = function(e){
+        //btnobj1.textContent
+        let colorText =  btnobj1.innerHTML;
+        result.style.backgroundColor = colorText;
+      };
+      btnobj2.ondblclick = e=>{
+        //btnobj1.textContent
+        let colorText =  btnobj2.innerHTML;
+        result.style.backgroundColor = colorText;
+      };
+      btnobj3.ondblclick = e=>{
+        //btnobj1.textContent
+        let colorText =  btnobj3.innerHTML;
+        result.style.backgroundColor = colorText;
+      };
+
+
+      // or 리스트 반복문
+      let btnList =  document.querySelectorAll("button");
+      
+      for(let i =0; i<btnList.length; i++){
+        btnList[i].onmouseover= e=> {
+          let colorText =  btnList[i].innerHTML;
+        result.style.backgroundColor = colorText;
+        }
+      }
+
+
+    </script>
+</body>
+</html>

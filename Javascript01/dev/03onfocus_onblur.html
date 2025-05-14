@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label {
+      display: inline-block;
+      width: 200px;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      border-bottom: 3px dotted black;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 서버에 form데이터를 post방식으로 insert.jsp에 전송하는 프로그램  -->
+
+  <form method='post' action='insert.jsp'>
+    <fieldset>
+      <legend>개인정보 입력하기</legend>
+      <label for="name">이름</label><input type='type' name='name' id="name" placeholder='your name'>
+      <span id="messageName"></span> <br>
+      <label for="id">아이디</label><input type='type' name='id' id="id" placeholder='insert your ID'>
+      <span id="messageid"></span><br>
+      <label for="pwd">비밀번호</label><input type='password' name='pwd' id="pwd" placeholder='insert password'>
+      <span id="messagepwd"></span><br>
+    </fieldset>
+    <input type='submit' value='전송'>
+    <input type='reset' value='취소'>
+  </form>
+
+  <script>
+    let inputName = document.querySelector("#name");
+    let messageName = document.querySelector("#messageName");
+    let messageid = document.querySelector("#messageid");
+    let messagepwd = document.querySelector("#messagepwd");
+
+    inputName.onfocus = event => messageName.innerHTML = "한글 1글자에서 4글자 입력";
+    
+    inputName.onblur = event => {
+      if (inputName.value.length > 4) {
+        messageName.innerHTML = "입력한 값이 4글자를 초과하였습니다.";
+        name.value = '';
+      } else if (inputName.value.length < 1) {
+        messageName.innerHTML = "입력한 값이 최소 1글자 이상이어야합니다.";
+        name.value = '';
+      }else messageName.innerHTML = "Good boy";
+    }
+  </script>
+</body>
+
+</html>

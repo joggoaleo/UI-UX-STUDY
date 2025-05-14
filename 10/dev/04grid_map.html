@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 900px;
+      
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,100px);
+      grid-template-areas: 
+      "item1 item1 item1"
+      "item2 item3 item3"
+      "item2 item4 item5"
+      ;
+      gap: 10px;
+      
+    }
+    .item{
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+    }
+    .item1{
+      background-color: #721414;
+      grid-area: item1;
+    }
+    .item2{
+      background-color: #b4ae41;
+      grid-area: item2;
+    }
+    .item3{
+      background-color: #429662;
+      grid-area: item3;
+    }
+    .item4{
+      background-color: #23598d;
+      grid-area: item4;
+    }
+    .item5{
+      background-color: #4d1493;
+      grid-area: item5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <item class="item item1">box1</item>
+    <item class="item item2">box2</item>
+    <item class="item item3">box3</item>
+    <item class="item item4">box4</item>
+    <item class="item item5">box5</item>
+  </div>
+</body>
+</html>

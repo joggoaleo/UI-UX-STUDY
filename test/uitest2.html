@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap {
+      width: 480px;
+      height: 60vh;
+      border: 1px solid black;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+
+    form {
+      gap: 20px;
+    }
+
+    label {
+      display: inline-block;
+      width: 100px;
+    }
+
+    input {
+      width: 300px;
+      height: 30px;
+      outline: none;
+      border: none;
+      border-bottom: 1px dotted black;
+      margin-bottom: 20px;
+    }
+
+    .signUp {
+      display: inline-block;
+      background-color: greenyellow;
+      width: 450px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <form method='post' action='insert.no'>
+      <div id="divId"><label for="id">아이디</label><input type='type' name='name' class="must" style="margin-bottom: 0;"></div><br><span class="Hidden" style="display: block; text-align: right;"></span><br>
+      <div><label for="pwd">패스워드</label><input type='type' name='name' id="pwd" class="must" style="margin-bottom: 0;"></div><br><span class="Hidden" id="pwdHidden" style="display: block; text-align: right;"></span><br>
+      <div><label for="doublecheck">패스워드 확인</label><input type='type' name='name' class ="must" style="margin-bottom: 0;"></div><br><span class="Hidden" style="display: block; text-align: right;"></span><br>
+      <label for="email">이메일</label><input type='type' name='name' id="email"><br>
+      <label for="address">주소</label><input type='type' name='name' id="address" style="height: 100px;"><br>
+      <input type='submit' value='가입' class="signUp">
+    </form>
+    <span></span>
+  </div>
+
+  <script>
+    let pwdclick = document.querySelector("#pwd");
+    let pwdHidden = document.querySelector("#pwdHidden");
+
+    pwdclick.onfocus = event =>pwdHidden.innerHTML = "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자";
+    
+    let must = document.querySelectorAll(".must");
+    let hidden = document.querySelectorAll(".Hidden");
+    must.onblur = event => event => hidden.innerHTML = "필수입력항목입니다.";
+    
+    // 
+ 
+    
+    
+  
+
+
+  </script>
+</body>
+
+</html>

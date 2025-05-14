@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      
+    }
+    .perspective{
+      perspective: 500px;
+    }
+    .rotatex :hover{
+      transform : scaleX(2);
+      /* transform: translateX(100px); */
+    }
+    
+    .rotatey :hover{
+       transform : scaleY(2);
+      /* transform: translateY(100px); */
+    }
+    .rotatexy :hover{
+      /* transform: translate(300px,300px); */
+       /* transform : scale(2,2); */
+       transform: scale(2,3);
+       
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    
+      <div class="rotatex"><img src="./../images/sunset.jpg" alt=""></div>
+    
+      <div class="origin"><div class="rotatey"><img src="./../images/sunset.jpg" alt=""></div></div>
+    
+      <div class="perspective"><div class="rotatexy"><img src="./../images/sunset.jpg" alt=""></div></div>
+    
+  </div>
+</body>
+</html>

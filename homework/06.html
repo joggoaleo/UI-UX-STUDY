@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .wrap {
+      margin: 0 auto;
+      width: 900px;
+      height: 30vh;
+      border: 1px dotted black;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    ul>li {
+      list-style: none;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+    }
+
+    li>button {
+      width: 100px;
+      height: 30px;
+    }
+
+    .inputWrap {
+      width: 100%;
+      margin-top: 50px;
+      margin-left: 40%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <form>
+      <div class="inputWrap">
+        <input type="text" id="value1" placeholder="값 1"><br>
+        <input type="text" id="value2" placeholder="값 2"><br>
+        <input type="text" id="result" placeholder="연산 결과"><br>
+
+      </div>
+
+      <ul>
+        <li><input type="button" id="add" value="+"></li>
+        <li><input type="button" id="sub" value="-"></li>
+        <li><input type="button" id="multi" value="*"></li>
+        <li><input type="button" id="divd" value="/"></li>
+        <li><input type="reset" value="reset"></input></li>
+      </ul>
+    </form>
+  </div>
+  <script>
+    let input1 = document.querySelector('#value1');
+    let input2 = document.querySelector('#value2');
+    let input3 = document.querySelector('#result');
+
+
+    let add = document.querySelector('#add');
+    let sub = document.querySelector('#sub');
+    let multi = document.querySelector('#multi');
+    let divd = document.querySelector('#divd');
+
+
+    add.onclick = e=> {
+      let value1 = Number(input1.value);
+      let value2 = Number(input2.value);
+      let result = value1 + value2;
+      input3.value = result;
+    };
+    sub.onclick = e=> {
+      let value1 = Number(input1.value);
+      let value2 = Number(input2.value);
+      let result = value1 - value2;
+      input3.value = result;
+    };
+    multi.onclick = e=> {
+      let value1 = Number(input1.value);
+      let value2 = Number(input2.value);
+      let result = value1 * value2;
+      input3.value = result;
+    };
+    divd.onclick = e=> {
+      let value1 = Number(input1.value);
+      let value2 = Number(input2.value);
+      let result = value1 / value2;
+      let result2 =  Math.floor(100*result)/100;
+      input3.value = result2;
+    };
+
+
+
+  </script>
+
+</body>
+
+</html>

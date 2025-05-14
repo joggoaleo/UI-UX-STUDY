@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id ="Q">3의배수 찾기</h1>
+  <p id ="A"></p>
+  
+
+  <script>
+    let ques =  document.querySelector('#Q');
+    let ans =  document.querySelector("#A");
+
+    ques.onclick = function(){
+      
+      let input = window.prompt("몇 까지 3의 배수를 찾을까요?");
+      for(let i =0; 3*i<= Number(input); i++){
+      // for(let i =0; i<= Number(input); i+=3){
+        if(i===0){continue;}
+        else if(input-3*i < 3){
+          ans.innerHTML +=`${3*i}`;
+        }
+         else{ans.innerHTML +=  `${3*i} ,&nbsp`};
+      } 
+    
+
+    }
+
+  </script>
+</body>
+</html>
