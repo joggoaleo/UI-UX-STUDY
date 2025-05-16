@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .wrap{
+     
+    }
+    .content{
+      width: 60%;
+      margin : 0 auto;
+      border : 3px dotted blue;
+      padding : 10px;
+      text-align: center;
+    }
+    .wrap1{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .img-main{
+      width: 50%;
+    }
+    .img-sub{
+      width: 33%;
+    }
+    .img-sub:hover{
+      cursor : pointer;
+      border : 3px solid black;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="content">
+      <img src="./../img/ball.png" alt="농구공" id="img-main">
+      <div class="wrap1">
+        <img src="./../img/ball.png" alt="농구공" class="img-sub">
+        <img src="./../img/prod1.jpg" alt="연필" class="img-sub">
+        <img src="./../../images/2468909.png" alt="멍멍" class="img-sub">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //객체 찾기
+    let mainImg = document.querySelector("#img-main");
+    let subImgList = document.querySelectorAll(".img-sub");
+    //객체이벤트 설정
+    for(let i =0; i<subImgList.length;i++){
+      subImgList[i].onmouseover = e => {
+        mainImg.src = subImgList[i].src;
+      }
+    }
+    
+    mainImg.onclick = function (event){
+      alert(`이미지 파일 this.src : ${this.src}`);
+      alert(`이미지 파일 mainImg.src : ${mainImg.src}`);
+       alert(`this: ${this}`);
+    }
+    mainImg.onclick = e =>{
+      alert(`이미지 파일 this.src : ${this.src}`);
+      alert(`이미지 파일 mainImg.src : ${mainImg.src}`);
+      alert(`화살표 this: ${this}`); //this: [object Window] -> 자바와 자바스크립트의 차이점/ 
+      //자바는 람다식의 주체는 객체로써 변하지않지만, 자바스크립트는 화살표함수의 주체는 window로 바뀜. this예약어 사용불가 
+    }
+  </script>
+</body>
+</html>

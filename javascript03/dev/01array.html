@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style></style>
+</head>
+
+<body>
+
+  <script>
+    //배열 선언 2개 numArray, charArray : 배열끼리 합치는 기능 concat
+    let numArray = [1, 2, 3];
+    let charArray = ["a", "b", "c", "d"];
+    document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+    document.write(`<h1>charArray = ${charArray}</h1> <br>`);
+    document.write(`<hr>`);
+    let numCharArray = numArray.concat(charArray);
+    document.write(`<h1>charArray = ${numCharArray}</h1> <br>`);
+    let charNumArray = charArray.concat(numArray);
+    document.write(`<h1>charNumArray = ${charNumArray.toString()}</h1> <br>`);
+    document.write(`<hr>`);
+    //배열 요소끼리 합치는 기능  join() charArray를 조인해서 문자열로 만들어보려고함.
+    let strCharArray = charArray.join();
+    document.write(`<h1>strCharArray =${strCharArray}</h1><br>`);
+    let str2CharArray = charArray.join('/');
+    document.write(`<h1>str2CharArray =${str2CharArray}</h1><br>`);
+    document.write(`<hr>`);
+    //배열에 ArrayList 처럼 내용을 추가기능(push,unshift)과 삭제기능 구현
+    //push 배열 뒤 인덱스에다가 추가. 
+    let countCharArray = numArray.push(10, 20);
+    document.write(`<h1>countCharArray =${countCharArray}</h1><br>`);
+    document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+    document.write(`<hr>`);
+    // unshift 배열 앞 인덱스에다가 추가
+    let count2CharArray = numArray.unshift(30, 40);
+    document.write(`<h1>count2CharArray =${count2CharArray}</h1><br>`);
+    document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+    document.write(`<hr>`);
+    // 배열에 ArrayList처럼 내용을 삭제하는 기능 (pop)
+    // let numArray = [30,40,1,2,3,10,20];
+    let popValue = numArray.pop();
+    document.write(`<h1>popValue =${popValue}</h1><br>`);
+    document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+    document.write(`<hr>`);
+    // 배열에 ArrayList처럼 내용을 앞에서 가져가는 기능 (shift)
+    // let numArray = [30,40,1,2,3,10];
+    let shiftValue = numArray.shift();
+    document.write(`<h1>shiftValue =${shiftValue}</h1><br>`);
+    document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+    document.write(`<hr>`);
+    // 배열 중간 요소 삭제 (splice) 첫인수는 삭제시작할 인덱스, 두번째인수는 삭제 개수,
+    //  세번째인수 부터는 삭제된 부분에 추가
+    //let numArray = [40,1,2,3,10];
+    let spliceArray = numArray.splice(2,0,4,5,"k");
+    document.write(`<h1>spliceArray =${spliceArray}</h1><br>`);
+    document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+    //let numArray = [ 40,1,4,5,k,2,3,10];
+    document.write(`<hr>`);
+
+    //배열 자르기 -> 원래 배열을 변경시키지 않고, 잘라진 중간값을 리턴 , 두번째 인수에 해당하는 인덱스의 원소는 포함안됨.
+    let sliceArray = numArray.slice(2,5);
+    document.write(`<h1>sliceArray =${sliceArray}</h1><br>`);
+    //let sliceArray =[4,5,k]
+    document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+    document.write(`<hr>`);
+    
+
+  </script>
+</body>
+
+</html>

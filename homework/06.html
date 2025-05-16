@@ -58,11 +58,20 @@
         <li><input type="button" id="sub" value="-"></li>
         <li><input type="button" id="multi" value="*"></li>
         <li><input type="button" id="divd" value="/"></li>
+        <li><input type="button" id="close1" value="창닫기"></li>
         <li><input type="reset" value="reset"></input></li>
       </ul>
     </form>
   </div>
+
   <script>
+
+    let popclose = document.querySelector('#close1');
+    popclose.onclick =  function(){
+      window.close();
+    }
+
+
     let input1 = document.querySelector('#value1');
     let input2 = document.querySelector('#value2');
     let input3 = document.querySelector('#result');
@@ -73,6 +82,7 @@
     let multi = document.querySelector('#multi');
     let divd = document.querySelector('#divd');
 
+    
 
     add.onclick = e=> {
       let value1 = Number(input1.value);

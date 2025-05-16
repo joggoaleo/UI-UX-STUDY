@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .wrap {
+      margin: 100px auto;
+      width: 300px;
+      height: 200px;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      width: 100px;
+      height: 40px;
+    }
+    .basicMode {
+      color: #ccc;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+    
+
+    .enabled {
+      color: #fff;
+      background-color: #1071d9;
+      border: 1px solid #007bff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="wrap1"><input type="checkbox" name="required" id="required"><label for="required">필수항목동의</label></div>
+    <br>
+    <a href=""><button class="basicMode" id="btnAction" disabled>다음으로 진행</button></a>
+  </div>
+
+  <script>
+    //document야 너가 가지고 있는 모든 노드의 객체가 완성이 되면 그때 나를 불러줘
+    //자바스크립트 작업 필수요소
+    document.addEventListener("DOMContentLoaded",function(){
+      //1.객체찾기
+      let checkbox = document.querySelector('#required');
+      let btn = document.querySelector('#btnAction');
+      console.log(btn);
+      //2.객체 (속성, 스타일 , 텍스트, 이벤트)
+      checkbox.addEventListener('change',function(){ 
+        // if(checkbox.checked==true){btn.classList.toggle(".enabled")
+        // btn.classList.toggle('basicMode');
+        //   btn.disabled = false;
+        // }
+        // else{btn.classList.toggle(".enabled")
+        // btn.classList.toggle('basicMode');
+        //   btn.disabled = true;
+        // };
+        btn.classList.toggle("enabled")
+        btn.classList.toggle('basicMode');
+        btn.disabled = !checkbox.checked;
+
+      },false);
+    },false);
+    
+  </script>
+</body>
+
+</html>
