@@ -147,11 +147,12 @@
         for (let i = 0; i < list.length; i++) {
           imgList[i].style.zIndex = list[i];
         }
-        for (let i = 0; i < indiList.length; i++) {
+        for (let i = 0; i < indiList.length; i++) { 
+          // 이전 반복문 실행으로 인해 색칠된거 초기화
           indiList[i].classList.remove('active');
         }
-        let index = list.indexOf(1);
-        indiList[index].classList.add('active');
+        let index = list.indexOf(1); 
+        indiList[index].classList.add('active');// 값이 1인 원소 자리에 색칠
       }
       listArray();
 
